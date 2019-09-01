@@ -1,4 +1,4 @@
-= Single Page Application development with React and Vert.x
+= Single Page message sharing with React and Vert.x EventBus
 :page-permalink: /
 :page-github: vertx-howtos/single-page-react-vertx-howto
 
@@ -6,23 +6,16 @@ ifdef::env-github[]
 image:https://travis-ci.org/vertx-howtos/single-page-react-vertx-howto.svg?branch=master["Build Status", link="https://travis-ci.org/vertx-howtos/single-page-react-vertx-howto"]
 endif::env-github[]
 
-This document will show you how to develop a Single Page Application (SPA) with React and Vert.x.
+This document will show you how to develop a Single Page Application (SPA) with React and Vert.x using EventBus
 
 == What you will build
 
-You will create a React frontend communicating over HTTP with a Vert.x backend.
+You will create a React frontend message syncronisation through EventBus with a Vert.x backend.
 
 == Development workflow
 
 When developing an SPA, it is very convenient to get instant feedback after updating a Javascript, HTML or CSS file.
 With React, this requires you start a development server with `npm` that handles requests for frontend resources:
-
-image::workflow.svg[Frontend resource]
-
-But what about requests that must be processed by Vert.x?
-You will configure the project so that the frontend development server proxies API requests to the backend:
-
-image::workflow-api.svg[API request]
 
 == What you need
 
@@ -33,27 +26,9 @@ image::workflow-api.svg[API request]
 * `npm`
 * https://www.npmjs.com/package/npx#install[`npx`], an NPM package runner
 
-== Create a project
+=== Work with Eclipse
 
-The code of this project contains Maven and Gradle build files that are functionally equivalent.
-
-=== Using Maven
-
-Add the `vertx-web` dependency in you Maven POM file:
-
-[source,xml]
-.Maven `pom.xml`
-----
-include::pom.xml[tag=dependencies]
-----
-
-Then add the `exec-maven-plugin`:
-
-[source,xml]
-.Maven `pom.xml`
-----
-include::pom.xml[tag=exec-plugin]
-----
+Import project to eclipse as maven project, 
 
 === Using Gradle
 
