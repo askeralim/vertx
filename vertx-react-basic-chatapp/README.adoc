@@ -12,12 +12,15 @@ This document will show you how to develop a Single Page Application (SPA) with 
 
 You will create a React frontend message syncronisation through EventBus with a Vert.x backend.
 === How to create build
-  #Build teh application using
-  mvn clean install
+----
+#Build teh application using
+mvn clean install
+----
 === How to run app
-  #Run the application using 
-  mvn exec:java
-  
+----
+#Run the application using 
+mvn exec:java
+----  
 == Summary
 
 This document covered:
