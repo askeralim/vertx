@@ -9,8 +9,8 @@ endif::env-github[]
 This document will show you how to develop a Single Page Application (SPA) with React and Vert.x using EventBus
 
 == What you will build
-
 You will create a React frontend message syncronisation through EventBus with a Vert.x backend.
+
 === How to create build
 ----
 #Build teh application using
