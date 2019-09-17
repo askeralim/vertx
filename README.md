@@ -16,6 +16,9 @@ A Very Basic react.js project to understand the App rendering with component onc
 Here I am migrating the existing react chat application using vert.x event bus ...
 Waiting for the weekend to fix issues and share here.
 
-##### Running application using node.js here [ChatApp in React.js running in Docker](https://github.com/askeralim/node-react-socket.io-docker-compose/tree/master/ChatApp-docker-compose-dev)
+##### Running application using node.js here 
+[ChatApp in React.js running in Docker](https://github.com/askeralim/node-react-socket.io-docker-compose/tree/master/ChatApp-docker-compose-dev)
 
-##### ChatApp devoloped using Vue.js [ChatApp in Vue.js running in Docker][https://github.com/askeralim/node-vuejs-typescript-vuex-redis-docker-compose]
+
+##### ChatApp devoloped using Vue.js 
+[ChatApp in Vue.js running in Docker](https://github.com/askeralim/node-vuejs-typescript-vuex-redis-docker-compose)
