@@ -16,10 +16,10 @@ A Very Basic react.js project to understand the App rendering with component onc
 Here I am migrating the project-1 application into a docker image. Refer the following link.
 [Run the chat-app withing docker](https://github.com/askeralim/vertx/tree/master/vertx-react-chatapp-docker)
 
+#### Up coming development for migrating the following projects into Vert.x Event bus deployed uisng docker-compose & K8S
 
 ##### Running application using node.js here 
 [ChatApp in React.js running in Docker](https://github.com/askeralim/node-react-socket.io-docker-compose/tree/master/ChatApp-docker-compose-dev)
-
 
 ##### ChatApp devoloped using Vue.js 
 [ChatApp in Vue.js running in Docker](https://github.com/askeralim/node-vuejs-typescript-vuex-redis-docker-compose)
