@@ -12,9 +12,10 @@ A Very Basic react.js project to understand the App rendering with component onc
 
 [vertx-react-basic-chatapp](https://github.com/askeralim/vertx/tree/master/vertx-react-basic-chatapp) 
 
-#### Project 2: vertx chat-app using react.js and vert.x EventBus 
-Here I am migrating the existing react chat application using vert.x event bus ...
-Waiting for the weekend to fix issues and share here.
+#### Project 2: Docker Build - vertx chat-app using react.js and vert.x EventBus with Clustered network 
+Here I am migrating the project-1 application into a docker image. Refer the following link.
+[Run the chat-app withing docker](https://github.com/askeralim/vertx/tree/master/vertx-react-chatapp-docker)
+
 
 ##### Running application using node.js here 
 [ChatApp in React.js running in Docker](https://github.com/askeralim/node-react-socket.io-docker-compose/tree/master/ChatApp-docker-compose-dev)
