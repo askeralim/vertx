@@ -89,10 +89,9 @@ class App extends Component {
   }
 
   render() {
-    //console.log("Rendering Messages List :"+this.state.data.messages);
-    var listItems = '';
+	var listItems = '';
     if(this.state.data.messages){
-      listItems = this.state.data.messages.map((msg,index) => <li key={index}>{msg.message}</li>);
+      listItems = this.state.data.messages.map((msg,index) => <li class="list-group-item" key={index}>{msg.message}</li>);
      // console.log("Rendering :"+listItems);
     }
     return (
@@ -102,7 +101,9 @@ class App extends Component {
           <input type="text" name="message" value={this.state.message} onChange={this.handleChange}/>
         </label>
         <button onClick={this.sendMessage}>Send </button>
+		<ul class="list-group">
         {listItems }
+		</ul>
       </div>
     );
   }
