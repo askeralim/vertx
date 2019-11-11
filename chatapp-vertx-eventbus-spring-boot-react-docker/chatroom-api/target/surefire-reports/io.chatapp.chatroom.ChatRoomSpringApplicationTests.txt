@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: io.chatapp.chatroom.ChatRoomSpringApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.971 sec - in io.chatapp.chatroom.ChatRoomSpringApplicationTests

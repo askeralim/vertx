@@ -1,0 +1,46 @@
+{
+  "name": "chatapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "connected-react-router": "^6.5.2",
+    "dateformat": "^3.0.3",
+    "history": "^4.10.1",
+    "immutable": "^3.8.2",
+    "node-fetch": "^2.6.0",
+    "react": "^16.8.6",
+    "react-bootstrap-dialog": "^0.10.0",
+    "react-bootstrap-prompt": "^1.0.1",
+    "react-dom": "^16.9.0",
+    "react-modal": "^3.8.1",
+    "react-redux": "^5.0.7",
+    "react-route": "^1.0.3",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "^2.1.8",
+    "redis": "^2.8.0",
+    "redux": "^4.0.4",
+    "redux-logger": "^3.0.6",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
+    "vertx3-eventbus-client": "^3.8.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

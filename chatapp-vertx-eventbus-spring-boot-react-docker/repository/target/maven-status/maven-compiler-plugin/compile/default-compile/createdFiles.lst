@@ -1,0 +1,14 @@
+io\chatapp\dao\model\Message.class
+io\chatapp\dao\app\ApplicationConfiguration.class
+io\chatapp\dao\app\AuthenticationService.class
+io\chatapp\dao\model\User.class
+io\chatapp\dao\repository\MessageRepository.class
+io\chatapp\dao\repository\GroupMemberRepository.class
+io\chatapp\dao\model\User$Status.class
+io\chatapp\dao\model\User$Type.class
+io\chatapp\dao\model\GroupMember.class
+io\chatapp\dao\model\Token.class
+io\chatapp\dao\model\Status.class
+io\chatapp\dao\DaoSpringApplication.class
+io\chatapp\dao\repository\UserRepository.class
+io\chatapp\dao\model\GroupMemberPrimaryKey.class

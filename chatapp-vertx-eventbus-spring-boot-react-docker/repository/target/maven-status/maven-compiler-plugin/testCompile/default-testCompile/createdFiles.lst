@@ -1,0 +1,4 @@
+io\chatapp\dao\app\MainSpringApplicationTests.class
+io\chatapp\dao\repository\UserRepositoryTest.class
+io\chatapp\dao\repository\GroupMemberRepositoryTest.class
+io\chatapp\dao\repository\MessageRepositoryTest.class

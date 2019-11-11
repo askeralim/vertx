@@ -1,0 +1,5 @@
+Build and Create the JAR Files
+    mvn clean install
+    mvn exec:java   #To run the Application
+
+Build All projects : mvn test-compile dependency:tree
