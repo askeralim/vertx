@@ -24,3 +24,6 @@ Install Mongo DB in Ubuntu
 
 db.createUser({user:"admin", pwd:"password", roles:[{role:"root", db:"admin"}]})
 
+SSH to docker-compose console
+    docker-compose exec user-api sh
+nginx logs in docker-compose
