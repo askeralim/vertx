@@ -52,7 +52,7 @@ public class ChatRoomVerticle extends AbstractVerticle {
         router.get("/chatroom/list").handler(this::userChatRoomList);
 
         // Start the web server and tell it to use the router to handle requests.
-        System.out.println("================ Message Server =============== PORT @ -"+configuration.getChatroomApiPort());
+        System.out.println("================ Chatroom Server =============== PORT @ -"+configuration.getChatroomApiPort());
         vertx.createHttpServer().requestHandler(router).listen(configuration.getChatroomApiPort());
         System.out.println("Server Started @ -"+configuration.getChatroomApiPort()+"  securityKey:"+configuration.getSecurityKey()+" Mongo :");
 
