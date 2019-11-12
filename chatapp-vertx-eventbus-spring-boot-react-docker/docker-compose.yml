@@ -19,7 +19,9 @@ services:
   #   Setup repository vertex
   ################################
   web:
-    build: ./web
+    build:
+      context: .
+      dockerfile: ./web/Dockerfile
     depends_on:
       - chatroom-api
       - user-api
@@ -30,7 +32,9 @@ services:
   #   Setup repository vertex
   ################################
   chatroom-api:
-    build: ./chatroom-api
+    build:
+      context: .
+      dockerfile: ./chatroom-api/Dockerfile
     depends_on:
       - mongodb
     expose:
@@ -39,7 +43,9 @@ services:
   #   Setup repository vertex
   ################################
   user-api:
-    build: ./user-api
+    build:
+      context: .
+      dockerfile: ./user-api/Dockerfile
     depends_on:
       - mongodb
     expose:
@@ -48,7 +54,9 @@ services:
   #   Setup repository vertex
   ################################
   message-api:
-    build: ./message-api
+    build:
+      context: .
+      dockerfile: ./message-api/Dockerfile
     depends_on:
       - mongodb
     expose:

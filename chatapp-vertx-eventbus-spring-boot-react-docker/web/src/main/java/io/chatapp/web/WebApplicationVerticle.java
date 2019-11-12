@@ -13,8 +13,8 @@ public class WebApplicationVerticle extends AbstractVerticle {
 		router.route().handler(StaticHandler.create());
 		// Start the web server and tell it to use the router to
 		// handle requests.
-		vertx.createHttpServer().requestHandler(router).listen(3001);
-		System.out.println("Server Started @3001");
+		vertx.createHttpServer().requestHandler(router).listen(3000);
+		System.out.println("Server Started @3000");
 	}
 	public static void main(String[] args) throws Exception {
 		 Vertx vertx = Vertx.vertx(); // <1>

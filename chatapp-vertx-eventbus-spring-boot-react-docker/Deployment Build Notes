@@ -21,3 +21,6 @@ Install Mongo DB in Ubuntu
  1075  sudo apt update
  1076  sudo apt install mongodb
  1077  sudo systemctl status mongodb
+
+db.createUser({user:"admin", pwd:"password", roles:[{role:"root", db:"admin"}]})
+
