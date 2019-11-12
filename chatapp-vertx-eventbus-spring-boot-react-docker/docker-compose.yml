@@ -8,6 +8,7 @@ services:
     image: mongo
     restart: always
     environment:
+      MONGO_INITDB_DATABASE: chatapp
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: password
     ports:
