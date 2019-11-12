@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: io.chatapp.dao.app.MainSpringApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.233 sec - in io.chatapp.dao.app.MainSpringApplicationTests
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.902 sec <<< FAILURE! - in io.chatapp.dao.app.MainSpringApplicationTests
+testProperties(io.chatapp.dao.app.MainSpringApplicationTests)  Time elapsed: 0.174 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<300[3]> but was:<300[0]>
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at io.chatapp.dao.app.MainSpringApplicationTests.testProperties(MainSpringApplicationTests.java:27)
+

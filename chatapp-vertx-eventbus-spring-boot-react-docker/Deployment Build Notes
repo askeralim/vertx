@@ -3,3 +3,6 @@ Build and Create the JAR Files
     mvn exec:java   #To run the Application
 
 Build All projects : mvn test-compile dependency:tree
+
+Run Spring-boot from JAr
+    java -jat jarname

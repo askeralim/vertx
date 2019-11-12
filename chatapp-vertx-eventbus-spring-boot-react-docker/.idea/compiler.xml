@@ -6,9 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="chatroom-api" />
         <module name="chatroomapi" />
+        <module name="message-api" />
         <module name="messageapi" />
         <module name="repository" />
+        <module name="user-api" />
         <module name="userapi" />
         <module name="web" />
       </profile>

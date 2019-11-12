@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.chatapp.dao.repository.GroupMemberRepositoryTest" time="0.001" tests="3" errors="0" skipped="0" failures="0">
+<testsuite name="io.chatapp.dao.repository.GroupMemberRepositoryTest" time="179.593" tests="6" errors="6" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\bin"/>
     <property name="java.vm.version" value="25.171-b11"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="D:\Study\Vertx\IntelliJ\chatapp"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Github\vertx\chatapp-vertx-eventbus-spring-boot-react-docker"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\Study\Vertx\IntelliJ\chatapp"/>
+    <property name="user.dir" value="D:\Github\vertx\chatapp-vertx-eventbus-spring-boot-react-docker"/>
     <property name="java.runtime.version" value="1.8.0_171-b11"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\endorsed"/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_171\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -64,7 +64,355 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="shouldReturnAllGroupsOfUser" classname="io.chatapp.dao.repository.GroupMemberRepositoryTest" time="0"/>
-  <testcase name="shouldReturnAllUsers" classname="io.chatapp.dao.repository.GroupMemberRepositoryTest" time="0.001"/>
-  <testcase name="shouldSaveGroupMember" classname="io.chatapp.dao.repository.GroupMemberRepositoryTest" time="0"/>
+  <testcase name="shouldReturnAllGroupsOfUser" classname="io.chatapp.dao.repository.GroupMemberRepositoryTest" time="59.562">
+    <error message="Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]" type="org.springframework.dao.DataAccessResourceFailureException"><![CDATA[org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:377)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:104)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getWriteConnectionSource(ClusterBinding.java:68)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:415)
+	at com.mongodb.operation.BaseWriteOperation.execute(BaseWriteOperation.java:133)
+	at com.mongodb.operation.BaseWriteOperation.execute(BaseWriteOperation.java:60)
+	at com.mongodb.Mongo.execute(Mongo.java:845)
+	at com.mongodb.Mongo$2.execute(Mongo.java:828)
+	at com.mongodb.DBCollection.executeWriteOperation(DBCollection.java:342)
+	at com.mongodb.DBCollection.remove(DBCollection.java:634)
+	at com.mongodb.DBCollection.remove(DBCollection.java:598)
+	at com.mongodb.DBCollection.remove(DBCollection.java:583)
+	at org.springframework.data.mongodb.core.MongoTemplate$13.doInCollection(MongoTemplate.java:1352)
+	at org.springframework.data.mongodb.core.MongoTemplate$13.doInCollection(MongoTemplate.java:1336)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:482)
+	at org.springframework.data.mongodb.core.MongoTemplate.doRemove(MongoTemplate.java:1336)
+	at org.springframework.data.mongodb.core.MongoTemplate.remove(MongoTemplate.java:1322)
+	at org.springframework.data.mongodb.core.MongoTemplate.remove(MongoTemplate.java:1314)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.deleteAll(SimpleMongoRepository.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:513)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:498)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:475)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy84.deleteAll(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy84.deleteAll(Unknown Source)
+	at io.chatapp.dao.repository.GroupMemberRepositoryTest.init(GroupMemberRepositoryTest.java:29)
+]]></error>
+    <system-out><![CDATA[2019-11-12 09:41:43.280  INFO 15224 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [io.chatapp.dao.repository.GroupMemberRepositoryTest], using SpringBootContextLoader
+2019-11-12 09:41:43.281  INFO 15224 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [io.chatapp.dao.repository.GroupMemberRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-11-12 09:41:43.293  INFO 15224 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-11-12 09:41:43.297  INFO 15224 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@37b52340, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@663bb8ef, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2f4e40d7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@60e9c3a5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7e5843db, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@459f703f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@188ac8a3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3650d4fc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@aaa0f76, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@340a8894, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7a8b9166, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4acc5dff]
+2019-11-12 09:41:43.332  INFO 15224 --- [           main] org.mongodb.driver.cluster               : No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=mongo:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2019-11-12 09:41:44.488  INFO 15224 --- [l'}-mongo:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server mongo:27017
+
+com.mongodb.MongoSocketException: mongo
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188) ~[mongo-java-driver-3.4.3.jar:na]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57) ~[mongo-java-driver-3.4.3.jar:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongo-java-driver-3.4.3.jar:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115) ~[mongo-java-driver-3.4.3.jar:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113) ~[mongo-java-driver-3.4.3.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+Caused by: java.net.UnknownHostException: mongo
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:1.8.0_171]
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928) ~[na:1.8.0_171]
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323) ~[na:1.8.0_171]
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276) ~[na:1.8.0_171]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192) ~[na:1.8.0_171]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126) ~[na:1.8.0_171]
+	at java.net.InetAddress.getByName(InetAddress.java:1076) ~[na:1.8.0_171]
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186) ~[mongo-java-driver-3.4.3.jar:na]
+	... 5 common frames omitted
+
+2019-11-12 09:42:13.348  INFO 15224 --- [           main] org.mongodb.driver.cluster               : No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]}. Waiting for 30000 ms before timing out
+]]></system-out>
+  </testcase>
+  <testcase name="shouldReturnAllGroupsOfUser" classname="io.chatapp.dao.repository.GroupMemberRepositoryTest" time="59.563">
+    <error message="Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]" type="org.springframework.dao.DataAccessResourceFailureException"><![CDATA[org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:377)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:104)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getWriteConnectionSource(ClusterBinding.java:68)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:415)
+	at com.mongodb.operation.BaseWriteOperation.execute(BaseWriteOperation.java:133)
+	at com.mongodb.operation.BaseWriteOperation.execute(BaseWriteOperation.java:60)
+	at com.mongodb.Mongo.execute(Mongo.java:845)
+	at com.mongodb.Mongo$2.execute(Mongo.java:828)
+	at com.mongodb.DBCollection.executeWriteOperation(DBCollection.java:342)
+	at com.mongodb.DBCollection.remove(DBCollection.java:634)
+	at com.mongodb.DBCollection.remove(DBCollection.java:598)
+	at com.mongodb.DBCollection.remove(DBCollection.java:583)
+	at org.springframework.data.mongodb.core.MongoTemplate$13.doInCollection(MongoTemplate.java:1352)
+	at org.springframework.data.mongodb.core.MongoTemplate$13.doInCollection(MongoTemplate.java:1336)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:482)
+	at org.springframework.data.mongodb.core.MongoTemplate.doRemove(MongoTemplate.java:1336)
+	at org.springframework.data.mongodb.core.MongoTemplate.remove(MongoTemplate.java:1322)
+	at org.springframework.data.mongodb.core.MongoTemplate.remove(MongoTemplate.java:1314)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.deleteAll(SimpleMongoRepository.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:513)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:498)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:475)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy84.deleteAll(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy84.deleteAll(Unknown Source)
+	at io.chatapp.dao.repository.GroupMemberRepositoryTest.finalize(GroupMemberRepositoryTest.java:34)
+]]></error>
+  </testcase>
+  <testcase name="shouldReturnAllUsers" classname="io.chatapp.dao.repository.GroupMemberRepositoryTest" time="60.012">
+    <error message="Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]" type="org.springframework.dao.DataAccessResourceFailureException"><![CDATA[org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:377)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:104)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getWriteConnectionSource(ClusterBinding.java:68)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:415)
+	at com.mongodb.operation.BaseWriteOperation.execute(BaseWriteOperation.java:133)
+	at com.mongodb.operation.BaseWriteOperation.execute(BaseWriteOperation.java:60)
+	at com.mongodb.Mongo.execute(Mongo.java:845)
+	at com.mongodb.Mongo$2.execute(Mongo.java:828)
+	at com.mongodb.DBCollection.executeWriteOperation(DBCollection.java:342)
+	at com.mongodb.DBCollection.remove(DBCollection.java:634)
+	at com.mongodb.DBCollection.remove(DBCollection.java:598)
+	at com.mongodb.DBCollection.remove(DBCollection.java:583)
+	at org.springframework.data.mongodb.core.MongoTemplate$13.doInCollection(MongoTemplate.java:1352)
+	at org.springframework.data.mongodb.core.MongoTemplate$13.doInCollection(MongoTemplate.java:1336)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:482)
+	at org.springframework.data.mongodb.core.MongoTemplate.doRemove(MongoTemplate.java:1336)
+	at org.springframework.data.mongodb.core.MongoTemplate.remove(MongoTemplate.java:1322)
+	at org.springframework.data.mongodb.core.MongoTemplate.remove(MongoTemplate.java:1314)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.deleteAll(SimpleMongoRepository.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:513)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:498)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:475)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy84.deleteAll(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy84.deleteAll(Unknown Source)
+	at io.chatapp.dao.repository.GroupMemberRepositoryTest.init(GroupMemberRepositoryTest.java:29)
+]]></error>
+    <system-out><![CDATA[2019-11-12 09:42:43.361  INFO 15224 --- [           main] org.mongodb.driver.cluster               : No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]}. Waiting for 30000 ms before timing out
+2019-11-12 09:43:13.363  INFO 15224 --- [           main] org.mongodb.driver.cluster               : No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]}. Waiting for 30000 ms before timing out
+]]></system-out>
+  </testcase>
+  <testcase name="shouldReturnAllUsers" classname="io.chatapp.dao.repository.GroupMemberRepositoryTest" time="60.013">
+    <error message="Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]" type="org.springframework.dao.DataAccessResourceFailureException"><![CDATA[org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:377)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:104)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getWriteConnectionSource(ClusterBinding.java:68)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:415)
+	at com.mongodb.operation.BaseWriteOperation.execute(BaseWriteOperation.java:133)
+	at com.mongodb.operation.BaseWriteOperation.execute(BaseWriteOperation.java:60)
+	at com.mongodb.Mongo.execute(Mongo.java:845)
+	at com.mongodb.Mongo$2.execute(Mongo.java:828)
+	at com.mongodb.DBCollection.executeWriteOperation(DBCollection.java:342)
+	at com.mongodb.DBCollection.remove(DBCollection.java:634)
+	at com.mongodb.DBCollection.remove(DBCollection.java:598)
+	at com.mongodb.DBCollection.remove(DBCollection.java:583)
+	at org.springframework.data.mongodb.core.MongoTemplate$13.doInCollection(MongoTemplate.java:1352)
+	at org.springframework.data.mongodb.core.MongoTemplate$13.doInCollection(MongoTemplate.java:1336)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:482)
+	at org.springframework.data.mongodb.core.MongoTemplate.doRemove(MongoTemplate.java:1336)
+	at org.springframework.data.mongodb.core.MongoTemplate.remove(MongoTemplate.java:1322)
+	at org.springframework.data.mongodb.core.MongoTemplate.remove(MongoTemplate.java:1314)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.deleteAll(SimpleMongoRepository.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:513)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:498)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:475)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy84.deleteAll(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy84.deleteAll(Unknown Source)
+	at io.chatapp.dao.repository.GroupMemberRepositoryTest.finalize(GroupMemberRepositoryTest.java:34)
+]]></error>
+  </testcase>
+  <testcase name="shouldSaveGroupMember" classname="io.chatapp.dao.repository.GroupMemberRepositoryTest" time="60.019">
+    <error message="Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]" type="org.springframework.dao.DataAccessResourceFailureException"><![CDATA[org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:377)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:104)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getWriteConnectionSource(ClusterBinding.java:68)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:415)
+	at com.mongodb.operation.BaseWriteOperation.execute(BaseWriteOperation.java:133)
+	at com.mongodb.operation.BaseWriteOperation.execute(BaseWriteOperation.java:60)
+	at com.mongodb.Mongo.execute(Mongo.java:845)
+	at com.mongodb.Mongo$2.execute(Mongo.java:828)
+	at com.mongodb.DBCollection.executeWriteOperation(DBCollection.java:342)
+	at com.mongodb.DBCollection.remove(DBCollection.java:634)
+	at com.mongodb.DBCollection.remove(DBCollection.java:598)
+	at com.mongodb.DBCollection.remove(DBCollection.java:583)
+	at org.springframework.data.mongodb.core.MongoTemplate$13.doInCollection(MongoTemplate.java:1352)
+	at org.springframework.data.mongodb.core.MongoTemplate$13.doInCollection(MongoTemplate.java:1336)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:482)
+	at org.springframework.data.mongodb.core.MongoTemplate.doRemove(MongoTemplate.java:1336)
+	at org.springframework.data.mongodb.core.MongoTemplate.remove(MongoTemplate.java:1322)
+	at org.springframework.data.mongodb.core.MongoTemplate.remove(MongoTemplate.java:1314)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.deleteAll(SimpleMongoRepository.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:513)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:498)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:475)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy84.deleteAll(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy84.deleteAll(Unknown Source)
+	at io.chatapp.dao.repository.GroupMemberRepositoryTest.init(GroupMemberRepositoryTest.java:29)
+]]></error>
+    <system-out><![CDATA[2019-11-12 09:43:43.375  INFO 15224 --- [           main] org.mongodb.driver.cluster               : No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]}. Waiting for 30000 ms before timing out
+2019-11-12 09:44:13.379  INFO 15224 --- [           main] org.mongodb.driver.cluster               : No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]}. Waiting for 30000 ms before timing out
+]]></system-out>
+  </testcase>
+  <testcase name="shouldSaveGroupMember" classname="io.chatapp.dao.repository.GroupMemberRepositoryTest" time="60.024">
+    <error message="Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]" type="org.springframework.dao.DataAccessResourceFailureException"><![CDATA[org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=UNKNOWN, servers=[{address=mongo:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: mongo}, caused by {java.net.UnknownHostException: mongo}}]
+	at com.mongodb.connection.BaseCluster.createTimeoutException(BaseCluster.java:377)
+	at com.mongodb.connection.BaseCluster.selectServer(BaseCluster.java:104)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:75)
+	at com.mongodb.binding.ClusterBinding$ClusterBindingConnectionSource.<init>(ClusterBinding.java:71)
+	at com.mongodb.binding.ClusterBinding.getWriteConnectionSource(ClusterBinding.java:68)
+	at com.mongodb.operation.OperationHelper.withConnection(OperationHelper.java:415)
+	at com.mongodb.operation.BaseWriteOperation.execute(BaseWriteOperation.java:133)
+	at com.mongodb.operation.BaseWriteOperation.execute(BaseWriteOperation.java:60)
+	at com.mongodb.Mongo.execute(Mongo.java:845)
+	at com.mongodb.Mongo$2.execute(Mongo.java:828)
+	at com.mongodb.DBCollection.executeWriteOperation(DBCollection.java:342)
+	at com.mongodb.DBCollection.remove(DBCollection.java:634)
+	at com.mongodb.DBCollection.remove(DBCollection.java:598)
+	at com.mongodb.DBCollection.remove(DBCollection.java:583)
+	at org.springframework.data.mongodb.core.MongoTemplate$13.doInCollection(MongoTemplate.java:1352)
+	at org.springframework.data.mongodb.core.MongoTemplate$13.doInCollection(MongoTemplate.java:1336)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:482)
+	at org.springframework.data.mongodb.core.MongoTemplate.doRemove(MongoTemplate.java:1336)
+	at org.springframework.data.mongodb.core.MongoTemplate.remove(MongoTemplate.java:1322)
+	at org.springframework.data.mongodb.core.MongoTemplate.remove(MongoTemplate.java:1314)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.deleteAll(SimpleMongoRepository.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.executeMethodOn(RepositoryFactorySupport.java:513)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:498)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:475)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:57)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy84.deleteAll(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy84.deleteAll(Unknown Source)
+	at io.chatapp.dao.repository.GroupMemberRepositoryTest.finalize(GroupMemberRepositoryTest.java:34)
+]]></error>
+  </testcase>
 </testsuite>
