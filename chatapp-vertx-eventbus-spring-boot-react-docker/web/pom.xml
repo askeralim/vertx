@@ -101,23 +101,23 @@
             </configuration>
             <!-- TODO Implement -->
             <executions>
-                <!--<execution>-->
-                    <!--<id>install-node-and-npm</id>-->
-                    <!--<phase>generate-resources</phase>-->
-                    <!--<goals>-->
-                        <!--<goal>install-node-and-npm</goal> &lt;!&ndash;1 &ndash;&gt;-->
-                    <!--</goals>-->
-                <!--</execution>-->
-                <!--<execution>-->
-                    <!--<phase>generate-resources</phase>-->
-                    <!--<id>npm-install</id>-->
-                    <!--<goals>-->
-                        <!--<goal>npm</goal>-->
-                    <!--</goals>-->
-                    <!--<configuration>-->
-                        <!--<arguments>install</arguments>-->
-                    <!--</configuration>-->
-                <!--</execution>-->
+                <execution>
+                    <id>install-node-and-npm</id>
+                    <phase>generate-resources</phase>
+                    <goals>
+                        <goal>install-node-and-npm</goal> <!--1 -->
+                    </goals>
+                </execution>
+                <execution>
+                    <phase>generate-resources</phase>
+                    <id>npm-install</id>
+                    <goals>
+                        <goal>npm</goal>
+                    </goals>
+                    <configuration>
+                        <arguments>install</arguments>
+                    </configuration>
+                </execution>
                 <execution>
                     <id>npm-run-build</id>
                     <phase>generate-resources</phase>
