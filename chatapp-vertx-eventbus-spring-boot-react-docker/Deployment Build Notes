@@ -6,3 +6,12 @@ Build All projects : mvn test-compile dependency:tree
 
 Run Spring-boot from JAr
     java -jat jarname
+
+HazleCast - Docker CLuster
+    https://stackoverflow.com/questions/39812848/how-do-i-configure-vert-x-event-bus-to-work-across-cluster-of-docker-containers?rq=1
+
+Docker-Compose
+    https://stackoverflow.com/questions/35832095/difference-between-links-and-depends-on-in-docker-compose-yml
+    links:
+        - db
+        - cache
