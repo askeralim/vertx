@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="86aeab33-6a17-48b0-8fed-7205c534eac8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deployment Build Notes" beforeDir="false" afterPath="$PROJECT_DIR$/Deployment Build Notes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker.application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/docker.application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatroom-api/src/main/java/io/chatapp/chatroom/ChatRoomVertxSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/chatroom-api/src/main/java/io/chatapp/chatroom/ChatRoomVertxSpringApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message-api/src/main/java/io/chatapp/message/MessageVertxSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/message-api/src/main/java/io/chatapp/message/MessageVertxSpringApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-api/src/main/java/io/chatapp/user/UserVertxSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/src/main/java/io/chatapp/user/UserVertxSpringApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/io/vertx/howtos/react/TestHazleCastReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/io/vertx/howtos/react/TestHazleCastReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/io/vertx/howtos/react/TestHazleCastSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/io/vertx/howtos/react/TestHazleCastSender.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,38 +27,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="221">
+              <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nginx/Dockerfile">
+        <entry file="file://$PROJECT_DIR$/chatroom-api/src/main/java/io/chatapp/chatroom/verticle/ChatRoomVerticle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="357">
+              <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/message-api/Dockerfile">
+        <entry file="file://$PROJECT_DIR$/chatroom-api/src/main/java/io/chatapp/chatroom/ChatRoomVertxSpringApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            <state relative-caret-position="204">
+              <caret line="29" column="41" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chatroom-api/Dockerfile">
+        <entry file="file://$PROJECT_DIR$/user-api/src/main/java/io/chatapp/user/UserVertxSpringApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            <state relative-caret-position="138">
+              <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/message-api/src/main/java/io/chatapp/message/MessageVertxSpringApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="36" column="96" selection-start-line="36" selection-start-column="96" selection-end-line="36" selection-end-column="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/java/io/vertx/howtos/react/TestHazleCastSender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="63" column="41" lean-forward="true" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/src/main/java/io/vertx/howtos/react/TestHazleCastReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -85,36 +119,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
               <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user-api/src/main/java/io/chatapp/user/verticle/UserVerticle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="72" column="21" lean-forward="true" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1513">
-              <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/repository/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -159,6 +163,7 @@
       <find>chatapp.repo</find>
       <find>spring-boot-maven-plugin</find>
       <find>insta</find>
+      <find>InetAddress</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,8 +174,6 @@
       <list>
         <option value="$PROJECT_DIR$/web/src/main/java/io/vertx/howtos/react/TestHazleCast.java" />
         <option value="$PROJECT_DIR$/message-api/src/main/java/io/vertx/message/MessageVertxSpringApplication.java" />
-        <option value="$PROJECT_DIR$/web/src/main/java/io/vertx/howtos/react/TestHazleCastReceiver.java" />
-        <option value="$PROJECT_DIR$/web/src/main/java/io/vertx/howtos/react/TestHazleCastSender.java" />
         <option value="$PROJECT_DIR$/chatapp.repo/src/main/java/io/vertx/dao/app/AuthenticationService.java" />
         <option value="$PROJECT_DIR$/chatroom-api/src/main/java/io/vertx/chatroom/verticle/ChatRoomVerticle.java" />
         <option value="$PROJECT_DIR$/message-api/src/main/java/io/vertx/message/verticle/MessageVerticle.java" />
@@ -184,7 +187,6 @@
         <option value="$PROJECT_DIR$/chatapp-repo/src/main/java/io/chatapp/dao/DaoSpringApplication.java" />
         <option value="$PROJECT_DIR$/chatapp-repo/src/test/java/io/chatapp/dao/app/MainSpringApplicationTests.java" />
         <option value="$PROJECT_DIR$/chatroom-api/src/main/java/io/vertx/chatroom/ChatRoomVertxSpringApplication.java" />
-        <option value="$PROJECT_DIR$/chatroom-api/src/main/java/io/chatapp/chatroom/ChatRoomVertxSpringApplication.java" />
         <option value="$PROJECT_DIR$/chatroom-api/src/test/java/io/chatapp/chatroom/ChatRoomSpringApplicationTests.java" />
         <option value="$PROJECT_DIR$/chatapp-repo/src/test/java/io/chatapp/dao/repository/GroupMemberRepositoryTest.java" />
         <option value="$PROJECT_DIR$/chatapp-repo/src/test/java/io/chatapp/dao/repository/MessageRepositoryTest.java" />
@@ -194,9 +196,7 @@
         <option value="$PROJECT_DIR$/chatapp-repo/src/test/java/io/chatapp/dao/repository/UserRepositoryTest.java" />
         <option value="$PROJECT_DIR$/message-api/src/main/java/io/chatapp/message/verticle/MessageVerticle.java" />
         <option value="$PROJECT_DIR$/message-api/src/test/java/io/chatapp/message/verticle/MessageSpringApplicationTests.java" />
-        <option value="$PROJECT_DIR$/message-api/src/main/java/io/chatapp/message/MessageVertxSpringApplication.java" />
         <option value="$PROJECT_DIR$/user-api/src/main/java/io/chatapp/user/verticle/UserVerticle.java" />
-        <option value="$PROJECT_DIR$/user-api/src/main/java/io/chatapp/user/UserVertxSpringApplication.java" />
         <option value="$PROJECT_DIR$/user-api/src/test/java/io/vertx/user/repository/UserSpringApplicationTests.java" />
         <option value="$PROJECT_DIR$/chatapp-repo/pom.xml" />
         <option value="$PROJECT_DIR$/repository/pom.xml" />
@@ -218,6 +218,11 @@
         <option value="$PROJECT_DIR$/nginx/nginx.conf" />
         <option value="$PROJECT_DIR$/docker.application.properties" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/chatroom-api/src/main/java/io/chatapp/chatroom/ChatRoomVertxSpringApplication.java" />
+        <option value="$PROJECT_DIR$/user-api/src/main/java/io/chatapp/user/UserVertxSpringApplication.java" />
+        <option value="$PROJECT_DIR$/message-api/src/main/java/io/chatapp/message/MessageVertxSpringApplication.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/io/vertx/howtos/react/TestHazleCastSender.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/io/vertx/howtos/react/TestHazleCastReceiver.java" />
       </list>
     </option>
   </component>
@@ -229,10 +234,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-15" />
-    <option name="y" value="-15" />
-    <option name="width" value="3875" />
-    <option name="height" value="2095" />
+    <option name="x" value="3832" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -615,7 +620,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49902913" visible="true" weight="0.20590208" />
       <window_info id="Structure" order="6" sideWeight="0.5009709" side_tool="true" weight="0.31924883" />
       <window_info anchor="bottom" id="Terminal" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.22535211" side_tool="true" weight="0.35818714" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.22535211" side_tool="true" visible="true" weight="0.35818714" />
       <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.3022388" weight="0.32163742" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -658,14 +663,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/src/main/frontend/src/components/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message-api/src/main/java/io/vertx/message/MessageVertxSpringApplication.java" />
     <entry file="file://$PROJECT_DIR$/user-api/src/main/java/io/vertx/user/BackendVerticle.java" />
     <entry file="file://$PROJECT_DIR$/web/src/main/resources/security.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -714,16 +711,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user-api/src/main/java/io/vertx/user/UserVertxSpringApplication.java" />
-    <entry file="file://$PROJECT_DIR$/chatroom-api/src/main/java/io/chatapp/chatroom/ChatRoomVertxSpringApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/repository/src/main/java/io/chatapp/dao/DaoSpringApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -800,13 +787,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/message-api/src/main/java/io/chatapp/message/MessageVertxSpringApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -889,16 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user-api/src/main/java/io/chatapp/user/UserVertxSpringApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/src/main/java/io/chatapp/web/WebApplicationVerticle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -913,13 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chatroom-api/src/main/java/io/chatapp/chatroom/verticle/ChatRoomVerticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -998,8 +961,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        <state relative-caret-position="221">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chatroom-api/src/main/java/io/chatapp/chatroom/ChatRoomVertxSpringApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="29" column="41" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chatroom-api/src/main/java/io/chatapp/chatroom/verticle/ChatRoomVerticle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-api/src/main/java/io/chatapp/user/UserVertxSpringApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message-api/src/main/java/io/chatapp/message/MessageVertxSpringApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="36" column="96" selection-start-line="36" selection-start-column="96" selection-end-line="36" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/io/vertx/howtos/react/TestHazleCastSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="63" column="41" lean-forward="true" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/io/vertx/howtos/react/TestHazleCastReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
@@ -1056,7 +1067,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>chatroomapi</last-edited>
+          <last-edited>chatapp</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

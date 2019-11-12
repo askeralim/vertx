@@ -26,7 +26,7 @@ public class UserVertxSpringApplication {
     @PostConstruct
     public void deployVerticle() {
         try {
-            String dockerIp = InetAddress.getByName("localhost").getHostAddress();
+            String dockerIp = InetAddress.getLocalHost().getHostAddress();
             VertxOptions options = new VertxOptions();
 //            ClusterManager mgr = new HazelcastClusterManager();
 //            options.setClusterManager(mgr);//lusterHost(dockerIp);

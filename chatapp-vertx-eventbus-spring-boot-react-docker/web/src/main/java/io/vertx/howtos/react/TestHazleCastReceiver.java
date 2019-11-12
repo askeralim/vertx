@@ -26,7 +26,7 @@ public class TestHazleCastReceiver extends AbstractVerticle {
 		// Vertx vertx = Vertx.vertx(); // <1>
 		// vertx.deployVerticle(new BackendVerticle()); // <2>
 
-		String dockerIp = InetAddress.getByName("localhost").getHostAddress();
+		String dockerIp = InetAddress.getLocalHost().getHostAddress();//getByName("localhost")
 		VertxOptions options = new VertxOptions();
 		options.setClusterHost(dockerIp);
 		Vertx.clusteredVertx(options,
