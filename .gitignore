@@ -5,3 +5,6 @@ target
 /chatapp-vertx-eventbus-spring-boot-react-docker/repository/1.0-SNAPSHOT
 /chatapp-vertx-eventbus-spring-boot-react-docker/user-api/target
 /chatapp-vertx-eventbus-spring-boot-react-docker/web/target
+/chatapp-vertx-eventbus-spring-boot-react-docker/chatroom-api/1.0-SNAPSHOT
+/chatapp-vertx-eventbus-spring-boot-react-docker/message-api/1.0-SNAPSHOT
+/chatapp-vertx-eventbus-spring-boot-react-docker/user-api/1.0-SNAPSHOT
