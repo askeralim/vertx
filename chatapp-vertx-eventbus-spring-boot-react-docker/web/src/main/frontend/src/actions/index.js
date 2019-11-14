@@ -1,4 +1,3 @@
-//import socket from "../components/socket.js";
 import fetch from 'node-fetch';
 import { BrowserRouter, Route,  } from "react-router-dom";
 export const SEARCH_CHATROOM = "SEARCH_CHATROOM";

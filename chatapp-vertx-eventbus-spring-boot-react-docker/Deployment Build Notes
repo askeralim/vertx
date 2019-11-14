@@ -27,3 +27,13 @@ db.createUser({user:"admin", pwd:"password", roles:[{role:"root", db:"admin"}]})
 SSH to docker-compose console
     docker-compose exec user-api sh
 nginx logs in docker-compose
+
+Stop Mongo DB :
+    sudo service mongodb stop
+
+NGINX
+    Open the Command Line using following command:
+    PsExec.exe -i -s cmd.exe
+
+    Reload NGinx
+ 	    nginx.exe -s reload

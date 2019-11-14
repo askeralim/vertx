@@ -4,8 +4,9 @@ import SearchBar from '../container/searchbar.js'
 import ChatRoomList from '../container/chatroom-list.js'
 import MessagePanel from '../container/message-panel.js'
 import { Redirect } from "react-router-dom";
-import socket from "./socket.js"
-import eventBus from './eventbus'
+//import socket from "./socket.js"
+// import eventBus from './eventbus'
+import EventBus from "vertx3-eventbus-client";
 import Dialog from 'react-bootstrap-dialog'
 import { createChatRoomAction, logOffFromChatServer, newChatRoomAction, newMessageAction, usersListAction, myChatRoomList, loginError } from '../actions/index';
 import fetch from "node-fetch";
@@ -22,11 +23,12 @@ class Home extends Component {
     console.log('Logged In User :'+JSON.stringify(this.props.loginToken));
    // this.props.history.push("/login");
     window.addEventListener('onbeforeunload', this.handleWindowClose);
-    this.loadUserDetails(this.props.dispatch, eventBus);
-   // this.eventBus = new EventBus(window.location.href+"eventbus");
-    const eb = eventBus;//this.eventBus;
+    this.loadUserDetails(this.props.dispatch);
     const self = this;
     const dispatch = this.props.dispatch;
+    this.eventBus = new EventBus(window.location.origin+"/eventbus");
+    const eb = this.eventBus;//this.eventBus;
+
     const loadUserDetails = this.loadUserDetails;
     // Listen for messages coming in
     eb.onopen = function() {
@@ -49,7 +51,7 @@ class Home extends Component {
       //loadUserDetails(dispatch, eb);
     };
   }
-  loadUserDetails(dispatch, eb){
+  loadUserDetails(dispatch){
     let loginToken = JSON.parse(localStorage.getItem("loginToken"));
     const url = window.location.origin + "/user/login";
     var headers = {
@@ -76,7 +78,7 @@ class Home extends Component {
           dispatch(myChatRoomList(res));
           res.forEach(room=>{
             console.log(room.id.groupId);
-            console.log("ChatList.js EventBus State:"+eb.state)
+            //console.log("ChatList.js EventBus State:"+eb.state)
             //chatRoomList = chatRoomList.map(room => room.get('id'));
             // eb.registerHandler("chat."+room.id.groupId, (err, message) => {
             //   if (!err) {
@@ -99,7 +101,7 @@ class Home extends Component {
      window.removeEventListener('onbeforeunload', this.handleWindowClose);
   }
   handleWindowClose(){
-    this.props.dispatch(logOffFromChatServer(socket));
+   // this.props.dispatch(logOffFromChatServer(socket));
   }
   openCreateChatRoomModal() {
    this.setState({modalIsOpen: true});
