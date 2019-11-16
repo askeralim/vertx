@@ -34,7 +34,9 @@ public class MessageVertxSpringApplication {
 //        ClusterManager mgr = new HazelcastClusterManager();
 //        options.setClusterManager(mgr);//lusterHost(dockerIp);
         try {
-            String dockerIp = InetAddress.getByName("localhost").getHostAddress();//getByName('localhost') getLocalHost()
+//            String dockerIp = InetAddress.getByName("localhost").getHostAddress();//getByName('localhost') getLocalHost()
+            //For Docker
+            String dockerIp = InetAddress.getLocalHost().getHostAddress();//getByName('localhost') getLocalHost()
             options.setClusterHost(dockerIp);
             Vertx.clusteredVertx(options,
                     vertxAsyncResult -> vertxAsyncResult.result().deployVerticle(messageVerticle));

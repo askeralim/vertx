@@ -27,7 +27,9 @@ public class ChatRoomVertxSpringApplication {
     public void deployVerticle() {
         VertxOptions options = new VertxOptions();
         try {
-            String dockerIp = InetAddress.getByName("localhost").getHostAddress();//getByName('localhost') getLocalHost()
+//            String dockerIp = InetAddress.getByName("localhost").getHostAddress();//getByName('localhost') getLocalHost()
+            //For Docker
+            String dockerIp = InetAddress.getLocalHost().getHostAddress();//getByName('localhost') getLocalHost()
             options.setClusterHost(dockerIp);
             Vertx.clusteredVertx(options,
                     vertxAsyncResult -> vertxAsyncResult.result().deployVerticle(chatRoomVerticle));

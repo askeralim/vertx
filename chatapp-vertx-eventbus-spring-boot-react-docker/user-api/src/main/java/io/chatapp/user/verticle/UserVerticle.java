@@ -101,7 +101,7 @@ public class UserVerticle extends AbstractVerticle {
                             .claim("password", java.util.Base64.getUrlEncoder().encodeToString(user.getPassword().getBytes()))
                             .setExpiration(getExpirationDate())
                             .signWith(signingKey).compact();
-                    rootObj.addProperty("status", "Success");
+                    rootObj.addProperty("status", Status.SUCCESS.getStatus());
                     rootObj.addProperty("name", authenticatedUser.getNickName());
                     rootObj.addProperty("username", authenticatedUser.getUsername());
                     rootObj.addProperty("id", authenticatedUser.getId());

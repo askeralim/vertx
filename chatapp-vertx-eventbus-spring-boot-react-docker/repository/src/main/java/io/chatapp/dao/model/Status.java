@@ -13,6 +13,6 @@ public class Status {
 		this.status = status;
 	}
 
-	public static Status SUCCESS = new Status("success");
-	public static Status FAIL = new Status("fail");
+	public static Status SUCCESS = new Status("Success");
+	public static Status FAIL = new Status("Failed");
 }
