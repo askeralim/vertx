@@ -31,7 +31,9 @@ I have used following technologies and libraries to develop this scalable applic
   
 [Run the Vert.x React.js chat-app with docker-compose](https://github.com/askeralim/vertx/tree/master/chatapp-vertx-eventbus-spring-boot-react-docker)
 
-#### Up coming development - Integrate ChatBoat using the Machinelearning NeuralNetwork Algorithms with "Cornell Movie-Dialogs Corpus" 
+#### Up coming development - 
+1. Integrate ChatBoat using the Machinelearning NeuralNetwork Algorithms with "Cornell Movie-Dialogs Corpus" 
+2. Integrate Apache Kafka for message delivery - It will ensure scalable, fault-tolerant and persistance features. Kafka stream can be used to apply realtime data analysis with Machine learning algorithms.
 
 ### Related Project Links
 ##### ChatApp developed using React.js 
