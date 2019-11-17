@@ -6,7 +6,7 @@ Build and Create the JAR Files
 
 Build All projects : mvn test-compile dependency:tree
 
-Run Spring-boot from JAr
+Run Spring-boot from Jar
     java -jat jarname
 
 HazleCast - Docker CLuster
