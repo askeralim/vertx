@@ -1,61 +1,198 @@
-# node-vuejs-typescript-vuex-redis-docker-compose
+# ChatApp - Using Vert.x EventBus, React.js & Mongo DB - Built with SpringBoot
 ### Background
-As part of understanding the concept of vue.js node.js with docker I have developed some application, I hope it will help you to do a quick start on your learning journey
+As part of understanding the concept of Vert.x eventbus & node.js with docker I have combined same existing ChatApplication application with Vert.x, I hope it will help you to do a quick start on your learning journey of Vert.x and SpringBoot
 
 ### GIT Link
 ```
-git clone https://github.com/askeralim/node-vuejs-typescript-vuex-redis-docker-compose.git
+git clone https://github.com/askeralim/vertx.git
 ```
 ### Projects
 ### Project 1: ChatApp  
-A Complete Vuejs+vuex with socket.io ChatApplication developed, backend run by node.js with Redis server
-To run this application it have two node project running in localhost (Still in Development mode, Some typescript bugs need to be fixed.) 
+A Complete Vert.x+React.js with EVentBus ChatApplication developed, backend run by SpringBoot + Vert.x Verticles with Mongo DB.
 
-[ChatApp-Server](https://github.com/askeralim/node-vuejs-typescript-vuex-redis-docker-compose/tree/master/chatapp-vue-server) 
-Run the server in one termins with following command.
-#### Server Running Command
+### Steps to run the application using docker-compose
+#### Get the project
 ```
-cd chatapp-vue-server
-npm install
-npm run start
+git clone https://github.com/askeralim/vertx.git
 ```
-[ChatApp-Client](https://github.com/askeralim/node-vuejs-typescript-vuex-redis-docker-compose/tree/master/chatapp-vue) 
-Run the vuejs application in one termins with following command.
-#### Client Running Command
+After cloning the project change to the project directory
 ```
-cd chatapp-vue
-npm install
-npm run serve
+cd chatapp-vertx-eventbus-spring-boot-react-docker
+mvn clean install
 ```
-#### Running Application Screen:
-The application can be accessed with link
-```
-http://localhost:8080
-```
-![Running Application Screen](https://github.com/askeralim/node-vuejs-typescript-vuex-redis-docker-compose/blob/master/Screen.JPG)
-### Project 2: Deploy the VueJs ChatApp in Docker container
-Working on it, have some TypeScript Bugs need to be fixed.
+The above command will test and build the application, To test the application it require a MongoDB, Mongo DB Configuration can be updated in application.properties 
 
-The Application is available @ (https://github.com/askeralim/node-vuejs-typescript-vuex-redis-docker-compose/tree/master/chatapp-vue-docker-compose)
+Link to application.properties :
+```
+https://github.com/askeralim/vertx/blob/master/chatapp-vertx-eventbus-spring-boot-react-docker/repository/src/main/resources/application.properties
+```
+##### Command to install MongoDB in Ubuntu
+```
+sudo apt update
+sudo apt install mongodb      # Install Mongo DB
+sudo systemctl status mongodb # Start the service
+```
+##### Command to Create user in Mongo DB
+```
+db.createUser({user:"admin", pwd:"password", roles:[{role:"root", db:"admin"}]})
+```
+##### Command to Stop MongoDB service
+```
+sudo service mongodb stop
+```
+#### Command Build the Docker Images
+The following command will build all the required docker images.
+```
+docker-compose build
+```
+### ChatApp docker-compose file
+```
+version: '3'
+
+services:
+  ################################
+  #   Setup MongoDB
+  ################################
+  mongodb:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: chatapp
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data
+  ################################
+  #   Setup web ReactApp vertex
+  ################################
+  web:
+    build:
+      context: .
+      dockerfile: ./web/Dockerfile
+    image: chatapp/web
+    depends_on:
+      - chatroom-api
+      - user-api
+      - message-api
+    expose:
+      - 3000
+  ################################
+  #   Setup chatroom-api vertex
+  ################################
+  chatroom-api:
+    build:
+      context: .
+      dockerfile: ./chatroom-api/Dockerfile
+    image: chatapp/chatroom-api
+    depends_on:
+      - mongodb
+    expose:
+      - 3000
+  ################################
+  #   Setup user-api vertex
+  ################################
+  user-api:
+    build:
+      context: .
+      dockerfile: ./user-api/Dockerfile
+    image: chatapp/user-api
+    depends_on:
+      - mongodb
+    expose:
+      - 3000
+  ################################
+  #   Setup message-api vertex
+  ################################
+  message-api:
+    build:
+      context: .
+      dockerfile: ./message-api/Dockerfile
+    image: chatapp/message-api
+    depends_on:
+      - mongodb
+    expose:
+      - 3000
+
+####################################################
+#   Setup nginx load balancer & Reverse proxy
+####################################################
+  nginx:
+    build: ./nginx
+    image: chatapp/nginx
+    #image: nginx:1.13 # this will use the latest version of 1.13.x
+    ports:
+      - '80:80' # expose 80 on host and sent to 80 in container
+    depends_on: 
+      - web
+    # volumes:
+    #   - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    #   - ./client/img:/etc/nginx/html/img
+volumes:
+  mongodb_data:
+```
+### NGINX configuration as follows
+```
+map $http_upgrade $connection_upgrade {
+	default upgrade;
+	'' close;
+}
+upstream web_LB {
+	server web:3000 weight=3;
+}
+upstream user_LB {
+	server user-api:3000;
+}
+upstream message_LB {
+	server message-api:3000;
+}
+upstream chatroom_LB {
+	server chatroom-api:3000;
+}
+upstream eventbus_LB {
+	server user-api:3000;
+}
+server {
+	listen 80;
+	server_name www.chatapp.com;
+	location / {
+		proxy_pass http://web_LB;
+	}
+	location /user/ {
+		proxy_pass http://user_LB;
+	}
+	location /message {
+		proxy_pass http://message_LB;
+	}
+	location /chatroom/ {
+		proxy_pass http://chatroom_LB;
+	}
+	location /eventbus/ {
+		proxy_pass http://user_LB;
+			proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection $connection_upgrade;
+	}
+	location /sockjs-node/ {
+		proxy_pass http://web_LB;
+			proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection $connection_upgrade;
+	}
+}
 
 ```
-cd chatapp-vue-docker-compose
+### Command to run the ChatApp using docker-compose
 ```
-#### Build the docker images using following command
+docker-compose up
 ```
-docker-compose -f dev.docker-compose.yml build
+### Running Application in Browser:
+The application can be accessed with link, The nginx is configured to access the React application port 80,
 ```
-#### Run the application using Docker-Compose
+http://localhost
 ```
-docker-compose -f dev.docker-compose.yml up
-```
-It will run 4 Docker Images
-1. Redis Server
-2. NGINX Server listening port 80
-3. Client - Vue Application
-4. Server - Node.js Server Application
 
-The application can be accessed with link
-```
-http://localhost/
-```
+### Find out more about me
+
+Askerali Maruthullathil [ - LinkedIn](http://linkedin.com/in/askeralim) 
