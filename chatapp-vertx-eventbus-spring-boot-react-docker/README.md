@@ -8,9 +8,8 @@ git clone https://github.com/askeralim/vertx.git
 ```
 ### Projects
 ### Project 1: ChatApp  
-A Complete Vert.x+React.js with EVentBus ChatApplication developed, backend run by SpringBoot + Vert.x Verticles with Mongo DB 
-[Vert.x ChatApp](https://github.com/askeralim/vertx/tree/master/chatapp-vertx-eventbus-spring-boot-react-docker) 
-Run the server in one termins with following command.
+A Complete Vert.x+React.js with EVentBus ChatApplication developed, backend run by SpringBoot + Vert.x Verticles with Mongo DB.
+
 #### Steps to run the application using docker-compose
 After cloning the project change to the project directory
 ```
@@ -128,6 +127,57 @@ services:
     #   - ./client/img:/etc/nginx/html/img
 volumes:
   mongodb_data:
+```
+#### NGINX configuration as follows
+```
+map $http_upgrade $connection_upgrade {
+	default upgrade;
+	'' close;
+}
+upstream web_LB {
+	server web:3000 weight=3;
+}
+upstream user_LB {
+	server user-api:3000;
+}
+upstream message_LB {
+	server message-api:3000;
+}
+upstream chatroom_LB {
+	server chatroom-api:3000;
+}
+upstream eventbus_LB {
+	server user-api:3000;
+}
+server {
+	listen 80;
+	server_name www.chatapp.com;
+	location / {
+		proxy_pass http://web_LB;
+	}
+	location /user/ {
+		proxy_pass http://user_LB;
+	}
+	location /message {
+		proxy_pass http://message_LB;
+	}
+	location /chatroom/ {
+		proxy_pass http://chatroom_LB;
+	}
+	location /eventbus/ {
+		proxy_pass http://user_LB;
+			proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection $connection_upgrade;
+	}
+	location /sockjs-node/ {
+		proxy_pass http://web_LB;
+			proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection $connection_upgrade;
+	}
+}
+
 ```
 #### Command to run the ChatApp using docker-compose
 ```
