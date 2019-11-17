@@ -10,7 +10,11 @@ git clone https://github.com/askeralim/vertx.git
 ### Project 1: ChatApp  
 A Complete Vert.x+React.js with EVentBus ChatApplication developed, backend run by SpringBoot + Vert.x Verticles with Mongo DB.
 
-#### Steps to run the application using docker-compose
+### Steps to run the application using docker-compose
+#### Get the project
+```
+git clone https://github.com/askeralim/vertx.git
+```
 After cloning the project change to the project directory
 ```
 cd chatapp-vertx-eventbus-spring-boot-react-docker
@@ -41,7 +45,7 @@ The following command will build all the required docker images.
 ```
 docker-compose build
 ```
-#### ChatApp docker-compose file
+### ChatApp docker-compose file
 ```
 version: '3'
 
@@ -128,7 +132,7 @@ services:
 volumes:
   mongodb_data:
 ```
-#### NGINX configuration as follows
+### NGINX configuration as follows
 ```
 map $http_upgrade $connection_upgrade {
 	default upgrade;
@@ -179,16 +183,16 @@ server {
 }
 
 ```
-#### Command to run the ChatApp using docker-compose
+### Command to run the ChatApp using docker-compose
 ```
 docker-compose up
 ```
-#### Running Application in Browser:
+### Running Application in Browser:
 The application can be accessed with link, The nginx is configured to access the React application port 80,
 ```
 http://localhost
 ```
 
-#### Find out more about me
+### Find out more about me
 
 Askerali Maruthullathil [ - LinkedIn](http://linkedin.com/in/askeralim) 
