@@ -1,12 +1,5 @@
-= Single Page message sharing with React and Vert.x EventBus
-:page-permalink: /
-:page-github: vertx-howtos/single-page-react-vertx-howto
-
-ifdef::env-github[]
-image:https://travis-ci.org/vertx-howtos/single-page-react-vertx-howto.svg?branch=master["Build Status", link="https://travis-ci.org/vertx-howtos/single-page-react-vertx-howto"]
-endif::env-github[]
-
-This document will show you how to develop a Single Page Application (SPA) with React and Vert.x using EventBus
+= A Simple React-Vert.x Chat-Application 
+== This document will show you how to develop a Single Page Application (SPA) with React and Vert.x using EventBus
 
 == What you will build
 You will create a React frontend message syncronisation through EventBus with a Vert.x backend.
@@ -14,13 +7,17 @@ You will create a React frontend message syncronisation through EventBus with a 
 === How to create build
 ----
 #Build teh application using
-mvn clean install
+mvn clean package
 ----
 === How to run app
 ----
 #Run the application using 
 mvn exec:java
 ----  
+=== How to access app
+----
+open http://localhost:8080/ in browser
+----
 == Summary
 
 This document covered:
