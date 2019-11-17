@@ -1,6 +1,8 @@
 # ChatApp - Using Vert.x EventBus, React.js & Mongo DB - Built with SpringBoot
 ### Background
 As part of understanding the concept of Vert.x eventbus & node.js with docker I have combined same existing ChatApplication application with Vert.x, I hope it will help you to do a quick start on your learning journey of Vert.x and SpringBoot
+### Application Video
+![Running Application Screen](https://github.com/askeralim/vertx/blob/master/chatapp-vertx-eventbus-spring-boot-react-docker/ChatAppVertxVideo.gif)
 
 ### GIT Link
 ```
