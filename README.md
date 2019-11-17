@@ -27,6 +27,7 @@ I have used following technologies and libraries to develop this scalable applic
   6. MongoDB
   7. Maven
   8. JWT
+  9. NGINX
   
 [Run the Vert.x React.js chat-app with docker-compose](https://github.com/askeralim/vertx/tree/master/chatapp-vertx-eventbus-spring-boot-react-docker)
 
