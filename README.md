@@ -14,11 +14,26 @@ A Very Basic react.js project to understand the App rendering with component onc
 
 #### Project 2: Docker Build - vertx chat-app using react.js and vert.x EventBus with Clustered network 
 Here I am migrating the project-1 application into a docker image. Refer the following link.
-[Run the chat-app withing docker](https://github.com/askeralim/vertx/tree/master/vertx-react-chatapp-docker)
+[Run the chat-app with docker](https://github.com/askeralim/vertx/tree/master/vertx-react-chatapp-docker)
 
-#### Up coming development for migrating the following projects into Vert.x Event bus deployed uisng docker-compose & K8S
+#### Project 3: Complete ChatApp - Using React.js and Vert.x EventBus within Clustered network using docker-compose
+Here I am migrating my existing React.js ChatApp I developed earlier to a Vert.x event bus based Application.
+I have used following technologies and libraries to develop this scalable application.
+  1. Vert.x
+  2. React.js
+  3. Redux.js
+  4. Docker-Compose
+  5. SpringBoot
+  6. MongoDB
+  7. Maven
+  8. JWT
+  
+[Run the Vert.x React.js chat-app with docker-compose](https://github.com/askeralim/vertx/tree/master/chatapp-vertx-eventbus-spring-boot-react-docker)
 
-##### Running application using node.js here 
+#### Up coming development - Integrate ChatBoat using the Machinelearning NeuralNetwork Algorithms with "Cornell Movie-Dialogs Corpus" 
+
+### Related Project Links
+##### ChatApp developed using React.js 
 [ChatApp in React.js running in Docker](https://github.com/askeralim/node-react-socket.io-docker-compose/tree/master/ChatApp-docker-compose-dev)
 
 ##### ChatApp devoloped using Vue.js 
