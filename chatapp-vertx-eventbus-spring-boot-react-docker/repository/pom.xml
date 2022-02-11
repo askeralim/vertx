@@ -12,7 +12,7 @@
     <packaging>jar</packaging>
     <properties>
         <!--<chatapp.version>1.0-SNAPSHOT</chatapp.version>-->
-        <vertx.version>3.7.0</vertx.version>
+        <vertx.version>3.9.4</vertx.version>
         <spring.boot.version>2.0.2.RELEASE</spring.boot.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
